@@ -1,0 +1,11 @@
+{
+  "name": "exercise3",
+  "version": "1.0.0",
+  "description": "exercise3 Create an HTTP web server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dima Kaddah",
+  "license": "ISC"
+}
