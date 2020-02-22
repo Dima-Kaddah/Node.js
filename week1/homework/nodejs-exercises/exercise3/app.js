@@ -11,7 +11,7 @@ let server = http.createServer(function(req, res) {
     });
   } else if (req.url === '/script.js') {
     fs.readFile('./script.js', null, function(error, script) {
-      res.writeHead(200, { 'Content-Type': 'text/javascript' });
+      res.writeHead(200, { 'Content-Type': 'application/javascript' });
       res.end(script);
     });
   } else if (req.url.match('.css$')) {
@@ -25,4 +25,4 @@ let server = http.createServer(function(req, res) {
   }
 });
 
-server.listen(3000); //the server listens on port 3000
+server.listen(3030); //the server listens on port 3000
