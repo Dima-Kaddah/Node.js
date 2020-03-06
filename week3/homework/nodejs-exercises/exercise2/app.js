@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
   })
     .then(res => res.json())
     .then(data => {
+      console.log(data);
       console.log(data.error.message);
     })
     .catch(err => {
