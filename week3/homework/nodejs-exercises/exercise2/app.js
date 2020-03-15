@@ -12,16 +12,15 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
   fetch(URL_API, {
-    headers: { authorization: `basis ${enCoPs}` },
+    headers: { authorization: `Basic ${enCoPs}` },
   })
     .then(res => res.json())
     .then(data => {
-      console.log(data);
-      console.log(data.error.message);
+      res.send(data);
+      res.end();
     })
     .catch(err => {
-      console.error(`somthing went wrong ${err}`);
-      res.end('somthing went wrong');
+      res.end(`somthing went wrong ${err}`);
     });
 });
 
