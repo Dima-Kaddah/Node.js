@@ -17,9 +17,13 @@ app.get('/', (req, res) => {
     body: JSON.stringify(dataBody),
   })
     .then(res => {
-      console.log(res);
+      return res.text();
+    })
+    .then(text => {
+      res.send(text);
     })
     .catch(err => {
+      res.send(`somthing went wrong ${err}`);
       console.error(`somthing went wrong ${err}`);
     });
 });
