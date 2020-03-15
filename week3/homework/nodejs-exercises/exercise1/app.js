@@ -12,10 +12,10 @@ app.get('/', (req, res) => {
     .then(res => res.json())
     .then(data => {
       console.log(data);
-      console.log(data.value.joke);
+      res.send(data.value.joke);
     })
     .catch(err => {
-      console.error(`there is something wrong ${err}`);
+      res.send(`there is something wrong ${err}`);
     });
 });
 
